@@ -1,0 +1,42 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+  <h2>Live streaming data:</h2>
+  <ul>
+    <li *ngFor="let message of streamedData">{{ message }}</li>
+  </ul>
+</div>
+
+<div style="text-align:center">
+  <h1>
+    Send Streamed Data
+  </h1>
+</div>
+
+<div>
+  <input type="number" [(ngModel)]="sendstrmData" />
+  <button (click)="sendStreamData()">Send Data</button>
+</div>
+<div>
+  <div style="text-align:center">
+    <h1>
+     Audio
+    </h1>
+  </div>
+  
+  <div>
+    <audio controls [src]="getAudioDataUri()"></audio>
+
+  </div>
+  <button (click)="stopStreaming()">Stop Recording</button>
+  <div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
