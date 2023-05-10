@@ -11,7 +11,7 @@ export class LiveStreamService {
   private scriptNode: ScriptProcessorNode | null = null;
   constructor() {
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl("http://localhost:11427/BroadcastHub")
+      .withUrl("http://localhost:http:your port in api/BroadcastHub/BroadcastHub")
       .build();
 
     this.startConnection();
